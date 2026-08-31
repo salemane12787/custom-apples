@@ -1,0 +1,29 @@
+{
+  "name": "apple_chestplate",
+  "description": "Ornate royal apple chestplate — 40x16 chest strip UV",
+  "uv_reference": "c__Users_hp_AppData_Roaming_Cursor_User_workspaceStorage_1da29c5ffe78f49bf665a4a0e78eabc5_images_chest-3d017d41-771f-432f-b418-0a2d17f4141d.png",
+  "scale": 16,
+  "layout": "manual",
+  "islands": {
+    "torso_front": {
+      "generator": "ornate_chest",
+      "part": "front",
+      "bbox_norm": [0.0, 0.0, 0.25, 1.0]
+    },
+    "torso_back": {
+      "generator": "ornate_chest",
+      "part": "back",
+      "bbox_norm": [0.25, 0.0, 0.5, 1.0]
+    },
+    "arm_left": {
+      "generator": "ornate_chest",
+      "part": "arm",
+      "bbox_norm": [0.5, 0.0, 0.75, 1.0]
+    },
+    "arm_right": {
+      "generator": "ornate_chest",
+      "part": "arm",
+      "bbox_norm": [0.75, 0.0, 1.0, 1.0]
+    }
+  }
+}

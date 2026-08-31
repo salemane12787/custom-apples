@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:stick" },
+    { "item": "minecraft:stick" },
+    { "item": "minecraft:stick" },
+    { "item": "minecraft:string" },
+    { "item": "minecraft:apple" }
+  ],
+  "result": { "item": "customapples:apple_fishing_rod", "count": 1 }
+}

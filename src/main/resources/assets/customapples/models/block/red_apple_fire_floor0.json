@@ -1,0 +1,6 @@
+{
+  "parent": "customapples:block/template_fire_floor_tinted",
+  "textures": {
+    "fire": "minecraft:block/fire_0"
+  }
+}

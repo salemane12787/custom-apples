@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["III", "IAI"],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "A": { "item": "minecraft:apple" }
+  },
+  "result": { "item": "customapples:iron_apple", "count": 1 }
+}

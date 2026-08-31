@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["B", "S", "S"],
+  "key": {
+    "B": { "item": "minecraft:enchanted_golden_apple" },
+    "S": { "item": "minecraft:blaze_rod" }
+  },
+  "result": { "item": "customapples:super_apple_sword", "count": 1 }
+}

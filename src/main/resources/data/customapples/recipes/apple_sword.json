@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["A", "A", "I"],
+  "key": {
+    "A": { "item": "minecraft:apple" },
+    "I": { "item": "minecraft:iron_ingot" }
+  },
+  "result": { "item": "customapples:apple_sword", "count": 1 }
+}

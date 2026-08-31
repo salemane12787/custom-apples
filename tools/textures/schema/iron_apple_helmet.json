@@ -1,0 +1,38 @@
+{
+  "name": "iron_apple_helmet",
+  "description": "Five iron apples on standard head-cross UV — no helmet design",
+  "uv_reference": "c__Users_hp_AppData_Roaming_Cursor_User_workspaceStorage_1da29c5ffe78f49bf665a4a0e78eabc5_images_head-5c7b063c-52a9-44dc-a7ba-eb1bfc29352d.png",
+  "scale": 16,
+  "layout": "manual",
+  "islands": {
+    "top": {
+      "generator": "iron_apple",
+      "view": "top",
+      "bbox_norm": [0.125, 0.0, 0.25, 0.25]
+    },
+    "left": {
+      "generator": "iron_apple",
+      "view": "side",
+      "bbox_norm": [0.0, 0.25, 0.125, 0.5]
+    },
+    "front": {
+      "generator": "iron_apple",
+      "view": "front",
+      "bbox_norm": [0.125, 0.25, 0.25, 0.5]
+    },
+    "right": {
+      "generator": "iron_apple",
+      "view": "side",
+      "bbox_norm": [0.25, 0.25, 0.375, 0.5]
+    },
+    "back": {
+      "generator": "iron_apple",
+      "view": "back",
+      "bbox_norm": [0.375, 0.25, 0.5, 0.5]
+    },
+    "bottom": {
+      "generator": "plain_iron",
+      "bbox_norm": [0.125, 0.5, 0.25, 0.75]
+    }
+  }
+}

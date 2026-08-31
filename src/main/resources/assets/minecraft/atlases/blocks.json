@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "customapples:entity/bell/bell_body"
+    }
+  ]
+}

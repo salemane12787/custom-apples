@@ -1,0 +1,10 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {"model": "customapples:block/red_apple_fire_floor0"},
+        {"model": "customapples:block/red_apple_fire_floor1"}
+      ]
+    }
+  ]
+}

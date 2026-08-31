@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bell_between_walls",
+  "textures": {
+    "particle": "customapples:block/apple_bell_body_bottom",
+    "bar": "customapples:block/apple_bell_frame"
+  }
+}

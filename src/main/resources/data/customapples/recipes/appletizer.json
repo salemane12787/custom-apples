@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["BBB", "BAB", "BBB"],
+  "key": {
+    "B": { "item": "minecraft:beef" },
+    "A": { "item": "minecraft:apple" }
+  },
+  "result": { "item": "customapples:appletizer", "count": 1 }
+}

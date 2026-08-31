@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/bell_ceiling",
+  "textures": {
+    "particle": "customapples:block/apple_bell_body_bottom",
+    "bar": "customapples:block/apple_bell_frame"
+  }
+}

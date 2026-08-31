@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["DDD", "DDD", "DAD"],
+  "key": {
+    "D": { "item": "minecraft:dirt" },
+    "A": { "item": "minecraft:apple" }
+  },
+  "result": { "item": "customapples:dirt_apple", "count": 1 }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["L L", "A A"],
+  "key": {
+    "L": { "item": "minecraft:leather" },
+    "A": { "item": "minecraft:apple" }
+  },
+  "result": { "item": "customapples:apple_boots", "count": 1 }
+}

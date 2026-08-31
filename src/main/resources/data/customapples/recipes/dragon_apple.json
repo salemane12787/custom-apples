@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["AAA", "ADA", "AAA"],
+  "key": {
+    "A": { "item": "customapples:apple_block" },
+    "D": { "item": "minecraft:dragon_egg" }
+  },
+  "result": { "item": "customapples:dragon_apple", "count": 1 }
+}

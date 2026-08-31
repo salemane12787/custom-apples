@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "customapples:block/apple_block_side",
+    "down": "customapples:block/apple_block_bottom",
+    "up": "customapples:block/apple_block_top",
+    "north": "customapples:block/apple_block_side",
+    "east": "customapples:block/apple_block_side",
+    "south": "customapples:block/apple_block_side",
+    "west": "customapples:block/apple_block_side"
+  }
+}

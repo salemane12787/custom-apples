@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["A", "A", "A"],
+  "key": {
+    "A": { "item": "minecraft:apple" }
+  },
+  "result": { "item": "customapples:apple_bucket", "count": 1 }
+}

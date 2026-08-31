@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["AA", "AS", " S"],
+  "key": {
+    "A": { "item": "minecraft:apple" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": { "item": "customapples:apple_axe", "count": 1 }
+}

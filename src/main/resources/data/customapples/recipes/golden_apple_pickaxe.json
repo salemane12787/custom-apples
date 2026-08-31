@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GGG", "GSG", " S "],
+  "key": {
+    "G": { "item": "minecraft:golden_apple" },
+    "S": { "item": "minecraft:blaze_rod" }
+  },
+  "result": { "item": "customapples:golden_apple_pickaxe", "count": 1 }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["BAB"],
+  "key": {
+    "B": { "item": "minecraft:bread" },
+    "A": { "item": "minecraft:apple" }
+  },
+  "result": { "item": "customapples:bread_apple", "count": 1 }
+}

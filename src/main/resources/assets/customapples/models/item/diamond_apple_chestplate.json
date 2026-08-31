@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "customapples:item/diamond_apple_chestplate"
+  }
+}

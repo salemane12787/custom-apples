@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:flint" },
+    { "item": "minecraft:apple" }
+  ],
+  "result": { "item": "customapples:flint_and_apple", "count": 1 }
+}

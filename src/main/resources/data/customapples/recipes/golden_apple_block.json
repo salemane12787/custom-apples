@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GGG", "GNG", "GGG"],
+  "key": {
+    "G": { "item": "minecraft:golden_apple" },
+    "N": { "item": "minecraft:nether_brick" }
+  },
+  "result": { "item": "customapples:golden_apple_block", "count": 1 }
+}

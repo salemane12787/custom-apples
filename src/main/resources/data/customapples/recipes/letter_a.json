@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{ "item": "minecraft:apple" }],
+  "result": { "item": "customapples:letter_a", "count": 1 }
+}

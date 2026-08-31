@@ -1,0 +1,19 @@
+{
+  "name": "apple_boots",
+  "description": "Ornate apple boots — 16x16 boot UV strip",
+  "uv_reference": "c__Users_hp_AppData_Roaming_Cursor_User_workspaceStorage_1da29c5ffe78f49bf665a4a0e78eabc5_images_boot-d18a34d3-ffce-49f5-be5c-d65a19c3f7dc.png",
+  "scale": 16,
+  "layout": "manual",
+  "islands": {
+    "boot_top": {
+      "generator": "ornate_boots",
+      "part": "top",
+      "bbox_norm": [0.0, 0.0, 1.0, 0.5]
+    },
+    "boot_body": {
+      "generator": "ornate_boots",
+      "part": "body",
+      "bbox_norm": [0.0, 0.5, 1.0, 1.0]
+    }
+  }
+}
