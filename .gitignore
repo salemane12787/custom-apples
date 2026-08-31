@@ -124,6 +124,8 @@ board.gif
 bell_bottom.png
 bell_side.png
 bell_top.png
+__pycache__/
+*.pyc
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
