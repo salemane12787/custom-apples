@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [" S ", "SAS", "SSS"],
+  "pattern": [" S ", "SAS", "SS "],
   "key": {
     "S": { "item": "minecraft:stick" },
     "A": { "item": "minecraft:apple" }

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["RRR", "RAR", "RRR"],
   "key": {
-    "R": { "item": "minecraft:redstone" },
+    "R": { "tag": "minecraft:redstone_ores" },
     "A": { "item": "minecraft:apple" }
   },
   "result": { "item": "customapples:redstone_apple", "count": 1 }

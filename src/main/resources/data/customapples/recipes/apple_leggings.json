@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["AAA", "AGA", "A A"],
+  "pattern": ["AAA", "A A", "A A"],
   "key": {
-    "A": { "item": "minecraft:apple" },
-    "G": { "item": "minecraft:gold_ingot" }
+    "A": { "item": "minecraft:apple" }
   },
   "result": { "item": "customapples:apple_leggings", "count": 1 }
 }

@@ -41,26 +41,15 @@ public class ModEvents {
         }
         ItemStack tool = player.getMainHandItem();
 
+        if (tool.is(ModItems.APPLE_AXE.get()) && TreeCapitatorHelper.isLeaves(event.getState())) {
+            event.setCanceled(true);
+            return;
+        }
+
         if (tool.is(ModItems.APPLE_AXE.get()) && TreeCapitatorHelper.isLog(event.getState())) {
             event.setCanceled(true);
             if (event.getLevel() instanceof ServerLevel serverLevel) {
                 TreeCapitatorHelper.breakTree(serverLevel, event.getPos(), player, tool);
-            }
-            return;
-        }
-
-        if (tool.is(ModItems.APPLE_AXE.get()) && TreeCapitatorHelper.isLeaves(event.getState())) {
-            // Single leaf breaks instantly with the apple axe
-            event.setCanceled(true);
-            if (event.getLevel() instanceof ServerLevel serverLevel) {
-                BlockState state = event.getState();
-                net.minecraft.world.level.block.Block.dropResources(state, serverLevel, event.getPos(),
-                        null, player, tool);
-                serverLevel.destroyBlock(event.getPos(), false);
-                serverLevel.levelEvent(2001, event.getPos(), net.minecraft.world.level.block.Block.getId(state));
-                if (tool.isDamageableItem()) {
-                    tool.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(player.getUsedItemHand()));
-                }
             }
             return;
         }

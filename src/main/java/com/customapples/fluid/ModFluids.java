@@ -1,11 +1,10 @@
 package com.customapples.fluid;
 
 import com.customapples.CustomApplesMod;
-import com.customapples.util.AppleTreeHelper;
+import com.customapples.fluid.AppleJuicePourTracker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.server.TickTask;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ItemStack;
@@ -111,11 +110,7 @@ public class ModFluids {
             if (!isAppleJuice(newFluid) || isAppleJuice(oldFluid)) {
                 return;
             }
-            // Full source blocks are bucket pour sites — trees only grow where juice spreads.
-            if (newFluid.isSource()) {
-                return;
-            }
-            AppleJuiceSpreadLogic.scheduleTree(serverLevel, pos);
+            AppleJuicePourTracker.scheduleTreeGrowth(serverLevel, pos);
         }
 
         @Override
@@ -155,8 +150,6 @@ public class ModFluids {
     }
 
     private static final class AppleJuiceSpreadLogic {
-        private static final int TREE_DELAY = 40;
-
         @FunctionalInterface
         private interface SpreadAction {
             void spread(LevelAccessor level, BlockPos pos, BlockState blockState,
@@ -186,15 +179,6 @@ public class ModFluids {
             }
 
             spreadAction.spread(level, pos, blockState, direction, fluidState);
-        }
-
-        private static void scheduleTree(ServerLevel level, BlockPos pos) {
-            int plantTick = level.getServer().getTickCount() + TREE_DELAY;
-            level.getServer().tell(new TickTask(plantTick, () -> {
-                if (isAppleJuice(level.getFluidState(pos))) {
-                    AppleTreeHelper.growAppleTreePublic(level, pos);
-                }
-            }));
         }
     }
 

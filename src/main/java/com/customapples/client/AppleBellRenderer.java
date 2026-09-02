@@ -1,7 +1,6 @@
 package com.customapples.client;
 
 import com.customapples.CustomApplesMod;
-import com.customapples.item.AppleBellBlock;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.geom.ModelLayers;
@@ -56,9 +55,7 @@ public class AppleBellRenderer implements BlockEntityRenderer<BellBlockEntity> {
         this.bellBody.xRot = swingX;
         this.bellBody.zRot = swingZ;
 
-        Material material = blockEntity.getBlockState().getBlock() instanceof AppleBellBlock
-                ? APPLE_BELL_MATERIAL
-                : BellRenderer.BELL_RESOURCE_LOCATION;
+        Material material = APPLE_BELL_MATERIAL;
         VertexConsumer vertexConsumer = material.buffer(buffer, RenderType::entitySolid);
         this.bellBody.render(poseStack, vertexConsumer, packedLight, packedOverlay);
     }

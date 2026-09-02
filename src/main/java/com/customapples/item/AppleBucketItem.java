@@ -1,6 +1,6 @@
 package com.customapples.item;
 
-import com.customapples.util.AppleTreeHelper;
+import com.customapples.fluid.AppleJuicePourTracker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -41,7 +42,8 @@ public class AppleBucketItem extends Item {
         if (state.is(BlockTags.LEAVES)) {
             if (!level.isClientSide) {
                 player.setItemInHand(hand, new ItemStack(ModItems.APPLE_BUCKET_JUICE.get()));
-                AppleTreeHelper.collapseLeavesCanopy(level, pos, player);
+                level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+                Block.popResource(level, pos, new ItemStack(Items.APPLE, 1 + level.getRandom().nextInt(2)));
                 level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.PLAYERS, 1.0f, 1.0f);
             }
             return net.minecraft.world.InteractionResult.sidedSuccess(level.isClientSide);

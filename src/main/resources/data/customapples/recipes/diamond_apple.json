@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["DDD", "DAD", "DDD"],
   "key": {
-    "D": { "item": "minecraft:diamond" },
+    "D": { "tag": "minecraft:diamond_ores" },
     "A": { "item": "minecraft:apple" }
   },
   "result": { "item": "customapples:diamond_apple", "count": 1 }

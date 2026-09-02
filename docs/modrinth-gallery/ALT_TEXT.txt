@@ -1,0 +1,45 @@
+Modrinth / CurseForge gallery — paste each line into "Image alt text" when uploading.
+
+Upload order: use 01 as the thumbnail (first image).
+
+01_thumbnail_real_apple_3d.png
+Photorealistic 3D APPLE item floating in a glass display in a snowy Minecraft ice biome.
+
+02_creative_tab_all_items.png
+Custom Apples creative inventory tab showing apple-themed tools, armor, food, and blocks.
+
+03_apple_armor_full_set.png
+Minecraft player wearing the full Custom Apples red armor set with apple chestplate in a spruce forest.
+
+04_apple_armor_back_view.png
+Back view of the Custom Apples apple armor set in a forest, with crafting hint for the Apple Axe.
+
+05_apple_bell_item.png
+Player holding the Apple Bell item next to a glowing apple block on grass.
+
+06_super_apple_pickaxe.png
+Enchanted Super Apple Pickaxe with pink glow held in a mined stone tunnel.
+
+07_apple_juice_bucket_world.png
+Flat grassy world with apple juice bucket placed on the ground and a small dug hole.
+
+08_named_worm_pet_pipi.png
+Pink custom worm pet named pipi crawling on grass in a flat Minecraft world.
+
+09_worm_name_screen.png
+Name Your Worm screen open while placing a worm from the Dirt Apple.
+
+10_early_progression_armor.png
+Player in red apple-themed gear on a flat world showing early progression items.
+
+11_apple_and_golden_apple_blocks.png
+Apple Block and Golden Apple Block placed side by side on stone.
+
+12_holding_real_apple.png
+Player holding the photorealistic 3D APPLE in a frozen ice spikes biome.
+
+13_real_apple_in_glass_display.png
+3D APPLE item displayed inside glass blocks in a snowy taiga biome.
+
+14_diamond_apple_cave.png
+Player in red armor in a deepslate cave filled with diamond ore after using Diamond Apple.

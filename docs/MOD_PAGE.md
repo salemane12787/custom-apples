@@ -144,6 +144,59 @@ custom apples, apple mod, progression mod, forge 1.20.1, apple sword, dragon app
 
 ---
 
+## Changelog v1.0.1
+
+**Bug fix & polish update** — progression order, recipes, performance, Apple Bell rendering, and tool behavior.
+
+### Apple Bell
+- Fixed placed Apple Bell showing only the wooden frame with **no swinging bell body**
+- Added a dedicated block entity type and proper client/server tickers so the bell animates and renders correctly
+- Apple bell renderer no longer replaces vanilla bells
+
+### Progression
+- Reworked unlock order so ore apples (**Emerald → Redstone → Diamond → Lapis**) come **before** the golden tier
+- Lapis Apple is now the capstone of the ore-apple line (not mixed into golden/endgame)
+- Tier bar and recipe unlocks match the new order
+
+### Tools & combat
+- **Apple Axe** no longer breaks leaves; tree cap only harvests logs
+- **Lapis Apple** max-enchant no longer applies curse enchantments (Binding / Vanishing)
+
+### Food
+- **Letter A** and standard foods use fast-eat (`alwaysEat`) where intended
+- Eatable apples can be consumed **even when hunger is full**
+
+### Recipes
+- Fixed illogical shapes and ingredient counts across many recipes
+- Ore apples now use proper **ore tags** (`emerald_ores`, `redstone_ores`, `diamond_ores`, `lapis_ores`)
+- Iron Apple, Apple Bell, Golden Pickaxe, armor, Bow, Fishing Rod, and related recipes corrected
+
+### Performance
+- Apple Block transmutation and Apple Bow arrow effects now scan **near players** instead of the entire world
+
+### UI
+- Item hint tooltips read from lang keys (`item.customapples.<id>.tooltip`)
+
+### Apple Bucket & juice
+- Bucket on leaves removes **only one leaf block** (not the whole connected canopy)
+- Trees grow **above** juice blocks, not in the same block
+- Each spread block grows a tree **3 seconds after that block gets juice** (staggered from center outward)
+
+### Super Apple Pickaxe
+- **3×3×3** mining cube
+- No apple trees when mining
+- **8192** durability
+
+### Golden & super tool durability
+- Golden Apple Sword & Pickaxe: **1024** (pick was 32 before)
+- Super Apple Sword & Pickaxe: **8192**
+
+### Note for existing worlds
+- **Break and re-place** any Apple Bells placed before this update so they use the new block entity
+- Progression index may differ after the reorder — a **new world** gives the cleanest experience
+
+---
+
 ## Changelog v1.0.0
 
 - Initial release

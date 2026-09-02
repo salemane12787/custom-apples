@@ -1,5 +1,6 @@
 package com.customapples;
 
+import com.customapples.block.ModBlockEntities;
 import com.customapples.effect.ModMobEffects;
 import com.customapples.entity.ModEntities;
 import com.customapples.event.ModEvents;
@@ -27,6 +28,7 @@ public class CustomApplesMod {
 
         ModItems.register(modBus);
         ModBlocks.register(modBus);
+        ModBlockEntities.register(modBus);
         ModMobEffects.register(modBus);
         ModFluids.register(modBus);
         ModEntities.register(modBus);

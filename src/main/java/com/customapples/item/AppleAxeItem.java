@@ -14,7 +14,7 @@ public class AppleAxeItem extends AxeItem {
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
         if (state.is(BlockTags.LEAVES)) {
-            return 32.0f;
+            return 1.0f;
         }
         if (state.is(BlockTags.LOGS)) {
             return super.getDestroySpeed(stack, state) * 1.5f;

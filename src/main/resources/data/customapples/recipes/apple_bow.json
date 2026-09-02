@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [" A ", "ASA", " A "],
+  "pattern": ["AS ", "ASA", " S "],
   "key": {
     "A": { "item": "minecraft:apple" },
     "S": { "item": "minecraft:string" }

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["GGG", "GSG", " S "],
+  "pattern": ["GGG", " S ", " S "],
   "key": {
     "G": { "item": "minecraft:golden_apple" },
     "S": { "item": "minecraft:blaze_rod" }

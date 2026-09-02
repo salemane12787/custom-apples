@@ -62,11 +62,16 @@ public final class EnchantHelper {
 
     private static void maxEnchant(ItemStack stack) {
         Map<Enchantment, Integer> enchants = new HashMap<>(EnchantmentHelper.getEnchantments(stack));
+        enchants.keySet().removeIf(Enchantment::isCurse);
+
         for (Enchantment enchantment : ForgeRegistries.ENCHANTMENTS.getValues()) {
-            if (!enchantment.canEnchant(stack)) {
+            if (enchantment.isCurse() || !enchantment.canEnchant(stack)) {
                 continue;
             }
             String id = ForgeRegistries.ENCHANTMENTS.getKey(enchantment).getPath();
+            if ("binding_curse".equals(id) || "vanishing_curse".equals(id)) {
+                continue;
+            }
             int level = INSANE_LEVELS.getOrDefault(id, Math.min(enchantment.getMaxLevel() + 3, 10));
             if ("silk_touch".equals(id) || "infinity".equals(id) || "mending".equals(id)
                     || "channeling".equals(id) || "multishot".equals(id)) {

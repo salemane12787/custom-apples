@@ -4,7 +4,7 @@
   "key": {
     "D": { "item": "minecraft:diamond" },
     "G": { "item": "minecraft:golden_apple" },
-    "C": { "item": "minecraft:leather_chestplate" }
+    "C": { "item": "customapples:apple_chestplate" }
   },
   "result": { "item": "customapples:diamond_apple_chestplate", "count": 1 }
 }

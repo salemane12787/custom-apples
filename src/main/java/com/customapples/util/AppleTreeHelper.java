@@ -14,20 +14,18 @@ public final class AppleTreeHelper {
     private AppleTreeHelper() {}
 
     public static void collapseLeavesCanopy(Level level, BlockPos start, Player player) {
-        for (int dx = -6; dx <= 6; dx++) {
-            for (int dy = -4; dy <= 8; dy++) {
-                for (int dz = -6; dz <= 6; dz++) {
-                    BlockPos p = start.offset(dx, dy, dz);
-                    BlockState state = level.getBlockState(p);
-                    if (state.getBlock() instanceof LeavesBlock) {
-                        level.setBlock(p, Blocks.AIR.defaultBlockState(), 3);
-                        if (player != null) {
-                            player.spawnAtLocation(new ItemStack(Items.APPLE, 2), 0);
-                        }
-                    }
-                }
+        BlockState state = level.getBlockState(start);
+        if (state.getBlock() instanceof LeavesBlock) {
+            level.setBlock(start, Blocks.AIR.defaultBlockState(), 3);
+            if (player != null) {
+                Block.popResource(level, start, new ItemStack(Items.APPLE, 1 + level.getRandom().nextInt(2)));
             }
         }
+    }
+
+    /** Grows a small tree one block above a juice block so the fluid is not replaced. */
+    public static void growAppleTreeAboveJuice(Level level, BlockPos juicePos) {
+        growAppleTreeFromTrunkBase(level, juicePos.above());
     }
 
     public static void spawnGiantAppleTrees(Level level, BlockPos center, int count) {
@@ -107,7 +105,33 @@ public final class AppleTreeHelper {
     }
 
     public static void growAppleTreePublic(Level level, BlockPos base) {
-        growAppleTree(level, base);
+        growAppleTreeFromTrunkBase(level, base);
+    }
+
+    private static void growAppleTreeFromTrunkBase(Level level, BlockPos trunkBase) {
+        if (!level.getBlockState(trunkBase).canBeReplaced()) {
+            return;
+        }
+        int height = 4 + level.random.nextInt(3);
+        for (int y = 0; y < height; y++) {
+            BlockPos logPos = trunkBase.above(y);
+            if (level.getBlockState(logPos).canBeReplaced()) {
+                level.setBlock(logPos, Blocks.OAK_LOG.defaultBlockState(), 3);
+            }
+        }
+        BlockPos top = trunkBase.above(height - 1);
+        for (int dx = -2; dx <= 2; dx++) {
+            for (int dy = -1; dy <= 2; dy++) {
+                for (int dz = -2; dz <= 2; dz++) {
+                    if (Math.abs(dx) + Math.abs(dz) + Math.abs(dy) < 4) {
+                        BlockPos leafPos = top.offset(dx, dy, dz);
+                        if (level.getBlockState(leafPos).canBeReplaced()) {
+                            level.setBlock(leafPos, Blocks.OAK_LEAVES.defaultBlockState(), 3);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private static void growAppleTree(Level level, BlockPos base) {
@@ -115,20 +139,6 @@ public final class AppleTreeHelper {
         while (level.getBlockState(ground).isAir() && ground.getY() > level.getMinBuildHeight()) {
             ground = ground.below();
         }
-        ground = ground.above();
-        int height = 4 + level.random.nextInt(3);
-        for (int y = 0; y < height; y++) {
-            level.setBlock(ground.above(y), Blocks.OAK_LOG.defaultBlockState(), 3);
-        }
-        BlockPos top = ground.above(height);
-        for (int dx = -2; dx <= 2; dx++) {
-            for (int dy = -1; dy <= 2; dy++) {
-                for (int dz = -2; dz <= 2; dz++) {
-                    if (Math.abs(dx) + Math.abs(dz) + Math.abs(dy) < 4) {
-                        level.setBlock(top.offset(dx, dy, dz), Blocks.OAK_LEAVES.defaultBlockState(), 3);
-                    }
-                }
-            }
-        }
+        growAppleTreeFromTrunkBase(level, ground.above());
     }
 }

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["III", "IAI"],
+  "pattern": ["III", "IAI", "I I"],
   "key": {
     "I": { "item": "minecraft:iron_ingot" },
     "A": { "item": "minecraft:apple" }

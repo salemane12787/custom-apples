@@ -17,7 +17,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> LETTER_A = ITEMS.register("letter_a",
             () -> new LetterAItem(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(4).saturationMod(0.3f).fast().build())));
+                    new FoodProperties.Builder().nutrition(4).saturationMod(0.3f).fast().alwaysEat().build())));
 
     public static final RegistryObject<Item> APPLE_AXE = ITEMS.register("apple_axe",
             () -> new AppleAxeItem(Tiers.WOOD, 9.0f, -3.1f, new Item.Properties()));
@@ -99,7 +99,7 @@ public class ModItems {
             () -> new GoldenAppleSwordItem(new Item.Properties()));
 
     public static final RegistryObject<Item> GOLDEN_APPLE_PICKAXE = ITEMS.register("golden_apple_pickaxe",
-            () -> new GoldenApplePickaxeItem(Tiers.GOLD, 1.0f, -2.8f, new Item.Properties()));
+            () -> new GoldenApplePickaxeItem(AppleToolTiers.GOLDEN_PICKAXE, 1.0f, -2.8f, new Item.Properties()));
 
     public static final RegistryObject<Item> SUPER_APPLE_SWORD = ITEMS.register("super_apple_sword",
             () -> new SuperAppleSwordItem(new Item.Properties()));

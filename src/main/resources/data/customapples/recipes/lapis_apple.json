@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["LLL", "LAL", "LLL"],
   "key": {
-    "L": { "item": "minecraft:lapis_lazuli" },
+    "L": { "tag": "minecraft:lapis_ores" },
     "A": { "item": "minecraft:apple" }
   },
   "result": { "item": "customapples:lapis_apple", "count": 1 }

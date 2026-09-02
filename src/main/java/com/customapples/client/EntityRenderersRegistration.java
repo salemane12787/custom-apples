@@ -1,10 +1,11 @@
 package com.customapples.client;
 
+import com.customapples.block.ModBlockEntities;
 import com.customapples.entity.ModEntities;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -32,8 +33,13 @@ public class EntityRenderersRegistration {
     }
 
     @SubscribeEvent
+    public static void registerOverlay(RegisterGuiOverlaysEvent event) {
+        ProgressionOverlay.register(event);
+    }
+
+    @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(BlockEntityType.BELL, AppleBellRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.APPLE_BELL.get(), AppleBellRenderer::new);
 
         event.registerEntityRenderer(ModEntities.THROWN_APPLE_BOMB.get(),
                 ctx -> new net.minecraft.client.renderer.entity.ThrownItemRenderer<>(ctx, 1.0f, true));

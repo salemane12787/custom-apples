@@ -79,9 +79,9 @@ public final class ProgressionManager {
     public static ProgressionTier getTier(Player player) {
         int idx = getUnlockIndex(player);
         if (idx >= UnlockStep.DRAGON_APPLE.ordinal()) return ProgressionTier.DRAGON_APPLE;
-        if (idx >= UnlockStep.LAPIS_APPLE.ordinal()) return ProgressionTier.LAPIS_APPLE;
         if (idx >= UnlockStep.END_APPLE.ordinal()) return ProgressionTier.END_TIER;
         if (idx >= UnlockStep.GOLDEN_APPLE_SWORD.ordinal()) return ProgressionTier.GOLDEN_APPLE;
+        if (idx >= UnlockStep.LAPIS_APPLE.ordinal()) return ProgressionTier.LAPIS_APPLE;
         if (idx >= UnlockStep.APPLE_BOOTS.ordinal()) return ProgressionTier.APPLE_BOOTS;
         if (idx >= UnlockStep.APPLE_AXE.ordinal()) return ProgressionTier.APPLE_AXE;
         return ProgressionTier.APPLE;
